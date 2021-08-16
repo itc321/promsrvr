@@ -1,4 +1,5 @@
 FROM infracloudio/csvserver:latest
+MAINTAINER Sam Roy
 COPY gencsv.sh /csvserver
 RUN chmod +x /csvserver/gencsv.sh && sh /csvserver/gencsv.sh
-ADD inputFile inputdata
+RUN cp /csvserver/inputFile /csvserver/inputdata
