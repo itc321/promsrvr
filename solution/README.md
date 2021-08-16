@@ -1,8 +1,8 @@
 docker container run -d infracloudio/csvserver:latest 
 
-docker build . -t infracloudio/csvserver:0.0.1
+docker build . -t infracloudio/csvserver:1.0
 
-docker container run -d infracloudio/csvserver:0.0.1
+docker container run -d infracloudio/csvserver:1.0
 
 docker container exec -it 61b7a21a2375 bash 
 
