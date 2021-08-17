@@ -1,5 +1,11 @@
 docker container run -d infracloudio/csvserver:latest 
 
+docker logs <container_id>
+          
+          error while reading the file "/csvserver/inputdata": open /csvserver/inputdata: no such file or directory
+
+Created the script gencsv.sh and created a Dockerfile to build the image so that the new image contains the inputdata . 
+
 docker build . -t infracloudio/csvserver:1.0
 
 docker container run -d infracloudio/csvserver:1.0
