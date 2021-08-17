@@ -1,5 +1,7 @@
 docker container run -d infracloudio/csvserver:latest 
 
+docker ps
+
 docker ps -a
 
 docker logs <container_id>
