@@ -1,5 +1,7 @@
 docker container run -d infracloudio/csvserver:latest 
 
+docker ps -a
+
 docker logs <container_id>
           
           error while reading the file "/csvserver/inputdata": open /csvserver/inputdata: no such file or directory
