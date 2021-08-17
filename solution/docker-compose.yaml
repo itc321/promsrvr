@@ -1,9 +1,22 @@
 version: '3.6'
 
 services:
-  web:
+# PART 2:  Build csvserver image using Dockerfile & running the container 
+  csvserver:
     build: .
     ports:
       - '9393:9300'
     environment:
       - CSVSERVER_BORDER=Orange
+# PART 3: Configure Prometheus to collect data from csvserver app . Add prometheus.yml config for configuring csvserver. 
+  prometheus:
+    image: "prom/prometheus:${TAG}"
+    volumes:
+      - type: bind
+        source: ./prometheus.yml
+        target: /etc/prometheus/prometheus.yml
+
+    ports:
+      - 9090:9090
+
+
