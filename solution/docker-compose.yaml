@@ -4,6 +4,7 @@ services:
 # PART 2:  Build csvserver image using Dockerfile & running the container 
   csvserver:
     build: .
+    image: infracloudio/csvserver:1.0
     ports:
       - '9393:9300'
     environment:
